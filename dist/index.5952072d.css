@@ -72,21 +72,24 @@ body{
     top: 5px;
     left: 6px;
 }
-/*画嘴巴*/
+/*画嘴巴-上嘴唇*/
 .month{
     width: 200px;
     height: 200px;
     position: absolute;
     top: 170px;
     left: 50%;
+    overflow: hidden;
     transform: translateX(-50%);
 }
 .month .up{
+    background-color:#ffe600 ;
     position: relative;
     top: -44px;
 }
 
 .month .up .lip{
+    background-color:#ffe600 ;
     border: 3px solid black;
     border-top-width: 0px;
     border-top-color: #ffe600;
@@ -95,11 +98,12 @@ body{
     margin-left: 50px;
     width: 100px;
     height: 30px;
+    z-index: 1;
 }
 
 .month .up .left{
     border-right-width: 0px;
-    border-right-color: #ffe600;
+        border-right-color: #ffe600;
     border-radius: 0 0 0 50px;
     transform: rotate(-15deg) translateX(-154px);
 }
@@ -111,8 +115,50 @@ body{
     transform: rotate(15deg) translateX(-47px);
 }
 
+.month .up .left::before{
+    content: "";
+    display: block;
+    border: 1px solid #ffe600;
+    transform: translateX(100%);
+    background-color: #ffe600;
+    height: 30px;
+}
 
 
+/*画嘴巴-下嘴唇*/
+.month .down{
+    width: 180px;
+    height: 150px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.month .down .circle-out{
+    position: absolute;
+    width: 150px;
+    height: 1000px;
+    left: 50%;
+    bottom: 0;
+    background-color: #9b000a;
+    overflow: hidden;
+    transform: translateX(-50%);
+    border-radius: 80px/337px;
+    z-index: -1;
+}
+
+.month .down .circle-out .cirgle-in{
+    position: absolute;
+    width: 150px;
+    height: 1000px;
+    bottom: 100px;
+    left: 50%;
+    top: 880px;
+    transform: translateX(-50%);
+    border-radius: 100px;
+    background-color: #ff485f;
+}
 
 
 
