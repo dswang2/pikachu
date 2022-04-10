@@ -75,7 +75,7 @@ body{
 }
 /*画嘴巴-上嘴唇*/
 .month{
-    width: 200px;
+    width: 210px;
     height: 200px;
     position: absolute;
     top: 170px;
@@ -106,14 +106,14 @@ body{
     border-right-width: 0px;
         border-right-color: #ffe600;
     border-radius: 0 0 0 50px;
-    transform: rotate(-15deg) translateX(-154px);
+    transform: rotate(-15deg) translateX(-156px);
 }
 .month .up .right{
-    top: 22px;
+    top: 24px;
     border-left-width: 0px;
     border-left-color: #ffe600;
     border-radius: 0 0 50px 0px;
-    transform: rotate(15deg) translateX(-47px);
+    transform: rotate(15deg) translateX(-51px);
 }
 
 .month .up .left::before{
@@ -178,6 +178,14 @@ body{
 .face.left{
     transform: translateX(-150px);
 }
-
+.center{
+    position: absolute;
+    border: 1px solid red;
+    width: 0;
+    height: 100vh;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 /*# sourceMappingURL=index.5952072d.css.map */
