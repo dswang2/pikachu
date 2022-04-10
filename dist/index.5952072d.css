@@ -1,4 +1,5 @@
 * {
+    caret-color: transparent; /*设置光标透明，不需要输入文字的点不显示光标*/
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
