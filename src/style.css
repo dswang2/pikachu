@@ -45,6 +45,27 @@ body{
     top: 8px;
     left: 0px;
 }
+/*鼻子的悬浮动画*/
+/*动画*/
+@keyframes wave {
+    0%{
+        transform: translateX(-50%) rotate(0deg); /*如果不加translateX，此前设置的偏移就会被覆盖掉*/
+    }
+    33%{
+        transform: translateX(-50%) rotate(5deg);
+    }
+    66%{
+        transform: translateX(-50%) rotate(-5deg);
+    }
+    100%{
+        transform: translateX(-50%) rotate(0deg);
+    }
+}
+/*启动动画*/
+.nose:hover{
+    transform-origin: center bottom; /*动画的中心点，左右是center，上下是bottom*/
+    animation: wave 300ms infinite linear;
+}
 /*画眼睛*/
 .eye{
     width: 64px;
