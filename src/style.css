@@ -18,28 +18,56 @@ body{
 }
 /*鼻子*/
 .nose {
-    background-color: red;
+    background-color: black;
     width: 20px;
     height: 20px;
     position: absolute;
-    left: 50%;
-    top: 200px;
+    left: 50%; /*鼻子居中的写法*/
+    transform: translateX(-50%); /*鼻子居中的写法*/
+    top: 140px;
     border-radius: 20px/16px;
 }
 .nose::before{
     content: ""; /*伪元素必须加content，否则看不见*/
     position: absolute;
     top: 8px;
-    left: 0px;
+    left: -1px;
     background-color: #ffe600;
-    width: 20px;
+    width: 22px;
     height: 12px;
 }
 .nose>.triangle {
-    border: 10px solid red;
-    border-color: red transparent transparent;
+    border: 10px solid black;
+    border-color: black transparent transparent;
     position: absolute;
     top: 8px;
     left: 0px;
 }
 
+.eye{
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -32px;
+    border-radius: 50%;
+    background-color: black;
+}
+.left{
+    transform: translateX(-100px);
+}
+.right{
+    transform: translateX(100px);
+}
+.eye::before{
+    content: "";
+    display: block; /*伪元素默认是行内元素，只有设置成块级元素，宽度才有效*/
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    position: relative;
+    border-radius: 50%;
+    top: 5px;
+    left: 6px;
+}
