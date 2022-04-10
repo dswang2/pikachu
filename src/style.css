@@ -26,6 +26,7 @@ body{
     transform: translateX(-50%); /*鼻子居中的写法*/
     top: 140px;
     border-radius: 20px/16px;
+    z-index: 1;
 }
 .nose::before{
     content: ""; /*伪元素必须加content，否则看不见*/
@@ -43,7 +44,7 @@ body{
     top: 8px;
     left: 0px;
 }
-
+/*画眼睛*/
 .eye{
     width: 64px;
     height: 64px;
@@ -54,10 +55,10 @@ body{
     border-radius: 50%;
     background-color: black;
 }
-.left{
+.eye.left{
     transform: translateX(-100px);
 }
-.right{
+.eye.right{
     transform: translateX(100px);
 }
 .eye::before{
@@ -71,3 +72,46 @@ body{
     top: 5px;
     left: 6px;
 }
+/*画嘴巴*/
+.month{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.month .up{
+    position: relative;
+    top: -44px;
+}
+
+.month .up .lip{
+    border: 3px solid black;
+    border-top-width: 0px;
+    border-top-color: #ffe600;
+    position: relative;
+    left: 50%;
+    margin-left: 50px;
+    width: 100px;
+    height: 30px;
+}
+
+.month .up .left{
+    border-right-width: 0px;
+    border-right-color: #ffe600;
+    border-radius: 0 0 0 50px;
+    transform: rotate(-15deg) translateX(-154px);
+}
+.month .up .right{
+    top: 22px;
+    border-left-width: 0px;
+    border-left-color: #ffe600;
+    border-radius: 0 0 50px 0px;
+    transform: rotate(15deg) translateX(-47px);
+}
+
+
+
+
+
