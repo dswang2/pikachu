@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #ffe600;
+    min-height: 100vh
+}
+.skin{
+    position: relative;
+}
+/*鼻子*/
+.nose {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    border-radius: 20px/16px;
+}
+.nose::before{
+    content: ""; /*伪元素必须加content，否则看不见*/
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    background-color: #ffe600;
+    width: 20px;
+    height: 12px;
+}
+.nose>.triangle {
+    border: 10px solid red;
+    border-color: red transparent transparent;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+}
+
