@@ -161,6 +161,23 @@ body{
     background-color: #ff485f;
 }
 
+.face{
+    border: 1px solid black;
+    background-color: red;
+    position: absolute;
+    width: 88px;
+    height: 88px;
+    top: 200px;
+    left: 50%;
+    border-radius: 50%;
+    margin-left: -44px;
+}
+.face.right{
+    transform: translateX(150px);
+}
+.face.left{
+    transform: translateX(-150px);
+}
 
 
 /*# sourceMappingURL=index.5952072d.css.map */
