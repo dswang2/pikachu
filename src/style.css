@@ -137,13 +137,14 @@ body{
     transform: rotate(15deg) translateX(-51px);
 }
 
-.month .up .left::before{
-    content: "";
-    display: block;
-    border: 1px solid #ffe600;
-    transform: translateX(100%);
+.month .up .hideLine {
     background-color: #ffe600;
+    position: absolute;
+    left: 50%;
+    width: 100px;
     height: 30px;
+    transform: translateX(-50%) translateY(-36px);
+    z-index: 3;
 }
 
 
