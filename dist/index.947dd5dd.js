@@ -479,16 +479,20 @@ function play() {
 }
 btnSlow.addEventListener('click', (e)=>{
     console.log("慢速");
+    speed = 5;
 });
 btnNormal.addEventListener('click', (e)=>{
     console.log("中速");
+    speed = 2;
 });
 btnFast.addEventListener('click', (e)=>{
     console.log("快速");
+    speed = 0;
 });
 let srtFinal = "";
 let n = 0;
 let flag = 0;
+let speed = 0;
 function step() {
     srtFinal = srtFinal + trans(str[n]);
     styleText.innerHTML = srtFinal;
@@ -505,7 +509,7 @@ function step() {
     if (flag === 1) return;
     setTimeout(()=>{
         step();
-    }, 0);
+    }, speed * 10);
 }
 function trans(ch) {
     switch(ch){
