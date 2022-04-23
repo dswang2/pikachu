@@ -2,36 +2,33 @@ import styleString from "./css";
 
 let styleContent = document.getElementById("styleContent");
 let styleText = document.querySelector("#styleText");
-const btnPause = document.querySelector("#btnPause");
-const btnSlow = document.querySelector("#btnSlow");
-const btnNormal = document.querySelector("#btnNormal");
+// const btnPause = document.querySelector("#btnPause");
+const btnPause = document.getElementById("btnPause");
+// const btnSlow = document.querySelector("#btnSlow");
+const btnSlow = document.getElementById("btnSlow");
+// const btnNormal = document.querySelector("#btnNormal");
 const btnFast = document.querySelector("#btnFast");
-btnPause.addEventListener('click',(e)=>{
-    (flag === 0 ? pause : play).call(null);
-})
-function pause(){
+let pause = () => {
     btnPause.innerHTML = "播放";
     flag = 1; // 暂停
+    clock && window.clearTimeout(clock); // 取消定时器
 }
-function play(){
+let play = () => {
     btnPause.innerHTML = "暂停";
     flag = 0;
     step();
 }
-btnSlow.addEventListener('click',(e)=>{
-    speed = 5;
-})
-btnNormal.addEventListener('click',(e)=>{
-    speed = 2;
-})
+btnPause.onclick = () =>(flag === 0 ? pause : play).call(null);
+btnSlow.onclick = () => speed = speed >= 10 ? speed + 10 : speed + 1;
 btnFast.addEventListener('click',(e)=>{
-    speed = 0;
+    speed = speed > 0 ? (speed > 10 ? speed - 10 : speed - 1) : 0;
 })
 
 let srtFinal = "";
 let n= 0;
 let flag = 0;
 let speed = 0;
+let clock;
 function step(){
     srtFinal = srtFinal + trans(styleString[n]);
     styleText.innerHTML = srtFinal;
@@ -48,7 +45,7 @@ function step(){
     if(flag === 1){
         return;
     }
-    setTimeout(()=>{
+    clock = setTimeout(()=>{
         step();
     },speed * 10);
 }
