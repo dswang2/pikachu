@@ -1,13 +1,6 @@
 let styleContent = document.getElementById("styleContent");
 let styleText = document.querySelector("#styleText");
 let str = `
-body{
-    background-color: #ffe600;
-    min-height: 100vh
-}
-.skin{
-    position: relative;
-}
 /*鼻子*/
 .nose {
     background-color: black;
