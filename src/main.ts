@@ -45,9 +45,7 @@ function step(){
     if(flag === 1){
         return;
     }
-    clock = setTimeout(()=>{
-        step();
-    },speed * 10);
+    clock = setTimeout(step,speed * 10);
 }
 function trans(ch){
     switch(ch){
