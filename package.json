@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "rm -rf dist && parcel build src/index.html --no-optimize  --public-url ./"
+  },
+  "name": "pikachu",
+  "version": "1.0.0",
+  "repository": "git@github.com:dswang2/pikachu.git",
+  "author": "wangdisheng <wangdishengyx@163.com>",
+  "license": "MIT"}

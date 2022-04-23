@@ -8,7 +8,8 @@ const player = {
     clock: undefined,
     init: () => {
         player.bindEvents();
-        player.step();
+        // player.step();
+        player.pause();
     },
     ui: {
         styleContent: document.getElementById("styleContent"),
