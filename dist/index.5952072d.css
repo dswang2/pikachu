@@ -11,10 +11,10 @@
     padding: 0px;
 }
 body{
-    background-color: #ffe600;
     min-height: 100vh
 }
 .skin{
+    background-color: #ffe600;
     position: relative;
 }
 /*!*鼻子*!*/
