@@ -10,7 +10,24 @@
 <body>
 <style id="styleContent"></style>
 <div id="styleText"></div>
+<div id="buttons">
+    <button id="btnPause">暂停</button>
+    <button id="btnSlow">快速</button>
+    <button id="btnNormal">中速</button>
+    <button id="btnFast">慢速</button>
+</div>
 <style>
+    button{
+        margin-top: 10px;
+        padding: 2px;
+        white-space: nowrap;
+    }
+    #buttons{
+        position: fixed;
+        top: 10px;
+        left: 100%;
+        transform: translateX(-150%);
+    }
     #styleText{
         position: fixed;
         top: 0;

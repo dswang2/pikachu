@@ -193,8 +193,42 @@ let str = `
     left: 50%;
     transform: translateX(-50%);
 }`;
-var srtFinal = "";
-var n= 0;
+
+const btnPause = document.querySelector("#btnPause");
+const btnSlow = document.querySelector("#btnSlow");
+const btnNormal = document.querySelector("#btnNormal");
+const btnFast = document.querySelector("#btnFast");
+btnPause.addEventListener('click',(e)=>{
+        if(flag === 0){
+        // 暂停状态转为播放状态
+        pause();
+    }else {
+        // 播放状态转为暂停状态
+        play();
+    }
+})
+function pause(){
+    btnPause.innerHTML = "播放";
+    flag = 1; // 暂停
+}
+function play(){
+    btnPause.innerHTML = "暂停";
+    flag = 0;
+    step();
+}
+btnSlow.addEventListener('click',(e)=>{
+    console.log("慢速");
+})
+btnNormal.addEventListener('click',(e)=>{
+    console.log("中速");
+})
+btnFast.addEventListener('click',(e)=>{
+    console.log("快速");
+})
+
+let srtFinal = "";
+let n= 0;
+let flag = 0;
 function step(){
     srtFinal = srtFinal + trans(str[n]);
     styleText.innerHTML = srtFinal;
@@ -203,6 +237,12 @@ function step(){
     styleText.scroll(0,99999); /*这是div的滚动条*/
     n += 1;
     if(n >= str.length){
+        srtFinal = "";
+        n = 0;
+        pause();
+        return;
+    }
+    if(flag === 1){
         return;
     }
     setTimeout(()=>{
